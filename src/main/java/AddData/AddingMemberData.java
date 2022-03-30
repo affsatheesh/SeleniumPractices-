@@ -97,8 +97,8 @@ public class AddingMemberData extends Helper
            // dobAdder(driver,EndDate,ed);
 
             WebElement submit = driver.findElement(By.xpath("//button[@class='btn btn-success mx-1 px-4']"));
-            JavascriptExecutor executor1 = (JavascriptExecutor) driver;
-            executor1.executeScript("arguments[0].click();", submit);
+         //   JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+           // executor1.executeScript("arguments[0].click();", submit);
             Thread.sleep(3000);
 
         }
