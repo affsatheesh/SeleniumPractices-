@@ -12,14 +12,14 @@ import java.io.IOException;
 
 public class UsingAutoIT {
 
-    public static void main(String [] arg) throws IOException, InterruptedException {
+    public static void main(String[] arg) throws IOException, InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        String url="http://www.leafground.com/pages/upload.html";
-        ((JavascriptExecutor)driver).executeScript("window.location = \'"+url+"\'");
+        String url = "http://www.leafground.com/pages/upload.html";
+        ((JavascriptExecutor) driver).executeScript("window.location = \'" + url + "\'");
 
         Thread.sleep(5000);
         WebElement clic = driver.findElement(By.xpath("//input[@name='filename']"));
@@ -27,7 +27,7 @@ public class UsingAutoIT {
         Actions action = new Actions(driver);
         action.click(clic).build().perform();
 
-     //   ((JavascriptExecutor)driver).executeScript("arguments[0].click();", clic);
+        //   ((JavascriptExecutor)driver).executeScript("arguments[0].click();", clic);
 
         Thread.sleep(5000);
 

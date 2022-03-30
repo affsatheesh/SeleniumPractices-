@@ -343,11 +343,11 @@ public class Helper {
         wait.until(ExpectedConditions.textToBePresentInElement(myyear, Year));
         action1.moveToElement(myyear).build().perform();
         action1.click().build().perform();
-     //   Thread.sleep(1000);
+        //   Thread.sleep(1000);
 
 
         for (int j = 0; j <= 13; j++) {
-         //   Thread.sleep(1000);
+            //   Thread.sleep(1000);
             WebElement monthstart1 = driver.findElement(By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter']"));
             wait.until(ExpectedConditions.visibilityOf(monthstart1));
             String monthdetails1 = monthstart1.getText();
@@ -357,7 +357,7 @@ public class Helper {
             if (Jan.equalsIgnoreCase(sty1)) {
                 break;
             } else {
-             //   Thread.sleep(1000);
+                //   Thread.sleep(1000);
                 Actions action3 = new Actions(driver);
                 WebElement date1 = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root MuiPickersCalendarHeader-iconButton']"));
                 wait.until(ExpectedConditions.elementToBeClickable(date1));
@@ -379,7 +379,7 @@ public class Helper {
                 action.doubleClick(day).build().perform();*/
                 //   Thread.sleep(2000);
 
-            //    Thread.sleep(1000);
+                //    Thread.sleep(1000);
                 //  WebElement day = driver.findElement(By.xpath("//p[text()='" + Day + "']"));
                 //    List<WebElement> day = driver.findElements(By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root MuiPickersDay-day']"));
                 List<WebElement> day = driver.findElements(By.xpath("//div[@role='presentation']"));
@@ -455,7 +455,7 @@ public class Helper {
         String replacedstr = CurrentDates.replace("/", "");
         int current = Integer.parseInt(replacedstr);
 
-       // Thread.sleep(1000);
+        // Thread.sleep(1000);
         if (endData <= current) {
 
             System.out.println("Below Current Date");
@@ -463,12 +463,12 @@ public class Helper {
             wait.until(ExpectedConditions.visibilityOf(packageName));
             Select packageName1 = new Select(packageName);
             packageName1.selectByVisibleText("Old System - Expired");
-         //   Thread.sleep(1000);
+            //   Thread.sleep(1000);
             WebElement submit = driver.findElement(By.xpath("//button[@class='btn btn-success mx-1 px-4']"));
-        //    JavascriptExecutor executor1 = (JavascriptExecutor) driver;
-         //   wait.until(ExpectedConditions.elementToBeClickable(submit));
-         //   executor1.executeScript("arguments[0].click();", submit);
-         //   Thread.sleep(1000);
+            //    JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+            //   wait.until(ExpectedConditions.elementToBeClickable(submit));
+            //   executor1.executeScript("arguments[0].click();", submit);
+            //   Thread.sleep(1000);
             driver.navigate().refresh();
 
 
@@ -511,7 +511,7 @@ public class Helper {
             action1.moveToElement(myyear).build().perform();
             action1.doubleClick().build().perform();
 
-         //   Thread.sleep(1000);
+            //   Thread.sleep(1000);
 
             int date44 = 22;
             int ik = Integer.parseInt(Year);
@@ -562,13 +562,13 @@ public class Helper {
                             wait.until(ExpectedConditions.elementToBeClickable(Days));
                             Actions action = new Actions(driver);
                             action.doubleClick(Days).build().perform();
-                    //            Thread.sleep(1000);
+                            //            Thread.sleep(1000);
                             WebElement submit = driver.findElement(By.xpath("//button[@class='btn btn-success mx-1 px-4']"));
-                        //    JavascriptExecutor executor1 = (JavascriptExecutor) driver;
-                        //    wait.until(ExpectedConditions.elementToBeClickable(submit));
-                        //    executor1.executeScript("arguments[0].click();", submit);
+                            //    JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+                            //    wait.until(ExpectedConditions.elementToBeClickable(submit));
+                            //    executor1.executeScript("arguments[0].click();", submit);
                             Thread.sleep(3000);
-                           // driver.navigate().refresh();
+                            // driver.navigate().refresh();
 
                             break;
                         } else {

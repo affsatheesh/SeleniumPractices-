@@ -5,8 +5,7 @@ import java.util.Date;
 
 public class Test {
 
-    public static void main (String [] arg)
-    {
+    public static void main(String[] arg) {
 /*      String nes =  MonthName(10);
         System.out.println(nes);*/
         testing();
@@ -28,7 +27,7 @@ public class Test {
                 String March = "March";
                 return March;
             case 4:
-                String April= "April";
+                String April = "April";
                 return April;
             case 5:
                 String May = "May";
@@ -49,10 +48,10 @@ public class Test {
                 String October = "October";
                 return October;
             case 11:
-                String November  = "November";
+                String November = "November";
                 return November;
             case 12:
-                String December  = "December";
+                String December = "December";
                 return December;
             default:
                 String Invalidmonth = "Invalid month";
@@ -60,38 +59,33 @@ public class Test {
         }
     }
 
-     public static void testing()
-{
-    String Year ="25";
-    String Monthformet ="02";
-    String Dayformet ="22";
+    public static void testing() {
+        String Year = "25";
+        String Monthformet = "02";
+        String Dayformet = "22";
 
-    String completeDate = Year+Monthformet+Dayformet;
-    int endData = Integer.parseInt(completeDate);
+        String completeDate = Year + Monthformet + Dayformet;
+        int endData = Integer.parseInt(completeDate);
 
-    SimpleDateFormat formatter = new SimpleDateFormat("yy/MM/dd");
-    Date currentDate = new Date();
-    String CurrentDates = formatter.format(currentDate);
-    String replacedstr = CurrentDates.replace("/","");
-   // System.out.println(replacedstr);
+        SimpleDateFormat formatter = new SimpleDateFormat("yy/MM/dd");
+        Date currentDate = new Date();
+        String CurrentDates = formatter.format(currentDate);
+        String replacedstr = CurrentDates.replace("/", "");
+        // System.out.println(replacedstr);
 
-    int current = Integer.parseInt(replacedstr);
+        int current = Integer.parseInt(replacedstr);
 
-    System.out.println("current"+current);
-    System.out.println("enddate"+endData);
+        System.out.println("current" + current);
+        System.out.println("enddate" + endData);
 
-    if(endData <= current)
-    {
-        String todayDate =  CurrentDates.substring(0,2);
-        System.out.println(todayDate);
-        System.out.println("Below Current Date");
-    } else {
-        System.out.println("Above Current Date");
+        if (endData <= current) {
+            String todayDate = CurrentDates.substring(0, 2);
+            System.out.println(todayDate);
+            System.out.println("Below Current Date");
+        } else {
+            System.out.println("Above Current Date");
+        }
     }
-}
-
-
-
 
 
 }

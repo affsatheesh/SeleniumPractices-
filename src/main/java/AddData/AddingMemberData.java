@@ -14,15 +14,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class AddingMemberData extends Helper
-{
+public class AddingMemberData extends Helper {
     public static WebDriver driver = null;
+
     public static void main(String[] arg) throws IOException, InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-          driver.get("https://skoolgo.pixelmindit.com:5700/#/");
+        driver.get("https://skoolgo.pixelmindit.com:5700/#/");
 
         driver.findElement(By.id("userName")).sendKeys("superadmin@pixel.com");
         driver.findElement(By.id("password")).sendKeys("sk12345");
@@ -65,7 +65,7 @@ public class AddingMemberData extends Helper
             DOBs.click();
 
             String dd = "dob";
-          //  dobAdder(driver,DOB,dd);
+            //  dobAdder(driver,DOB,dd);
 
             WebElement nationality = driver.findElement(By.id("nationality"));
             Select select = new Select(nationality);
@@ -94,11 +94,11 @@ public class AddingMemberData extends Helper
             WebElement Enddate = driver.findElement(By.xpath("//input[@class='MuiInputBase-input MuiInput-input']//following::input[9]"));
             Enddate.click();
             String ed = "Enddate";
-           // dobAdder(driver,EndDate,ed);
+            // dobAdder(driver,EndDate,ed);
 
             WebElement submit = driver.findElement(By.xpath("//button[@class='btn btn-success mx-1 px-4']"));
-         //   JavascriptExecutor executor1 = (JavascriptExecutor) driver;
-           // executor1.executeScript("arguments[0].click();", submit);
+            //   JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+            // executor1.executeScript("arguments[0].click();", submit);
             Thread.sleep(3000);
 
         }

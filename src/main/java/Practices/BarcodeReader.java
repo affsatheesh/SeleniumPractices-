@@ -21,9 +21,9 @@ import java.net.URL;
 public class BarcodeReader {
     public static WebDriver driver;
 
-    public static void main(String [] arg) throws IOException, NotFoundException, InterruptedException {
+    public static void main(String[] arg) throws IOException, NotFoundException, InterruptedException {
         WebDriverManager.chromedriver().setup();
-         driver = new ChromeDriver();
+        driver = new ChromeDriver();
         myProjectQRCode();
 
     }
@@ -41,12 +41,12 @@ public class BarcodeReader {
         driver.findElement(By.id("password")).sendKeys("sk12345");
         driver.findElement(By.xpath("//button[text()='Login']")).click();
         Thread.sleep(5000);
-        WebElement Element= driver.findElement(By.xpath("//p[text()='Backup and Restore']"));
+        WebElement Element = driver.findElement(By.xpath("//p[text()='Backup and Restore']"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", Element);
         Thread.sleep(2000);
-        WebElement Info= driver.findElement(By.xpath("//p[text()='Information']"));
-        WebElement addbranch= driver.findElement(By.xpath("//a[text()='Add Branch']"));
+        WebElement Info = driver.findElement(By.xpath("//p[text()='Information']"));
+        WebElement addbranch = driver.findElement(By.xpath("//a[text()='Add Branch']"));
         Actions action = new Actions(driver);
         Thread.sleep(2000);
         action.moveToElement(Info).click().build().perform();
@@ -59,8 +59,8 @@ public class BarcodeReader {
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
         js2.executeScript("arguments[0].click();", eyebutton);
         Thread.sleep(3000);
-        String qrCodeImage  =driver.findElement(By.tagName("svg")).getAttribute("shape-rendering");
-      //  String qrCodeImage = driver.findElement(By.tagName("img")).getAttribute("src");
+        String qrCodeImage = driver.findElement(By.tagName("svg")).getAttribute("shape-rendering");
+        //  String qrCodeImage = driver.findElement(By.tagName("img")).getAttribute("src");
         String res = decodeQRCode(qrCodeImage);
         System.out.println(qrCodeImage);
         System.out.println(res);

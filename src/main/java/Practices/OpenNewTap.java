@@ -14,16 +14,15 @@ public class OpenNewTap {
 
     public static WebDriver driver;
 
-    public static void main(String [] arg) throws IOException, NotFoundException, InterruptedException {
+    public static void main(String[] arg) throws IOException, NotFoundException, InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         OpenNewTaps();
     }
-    
-    public static void OpenNewTaps()
-    {
+
+    public static void OpenNewTaps() {
         driver.get("https://opensource-demo.orangehrmlive.com/");
-        String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN);
+        String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
         driver.findElement(By.xpath("//a[contains(text(),'Forgot your')]")).sendKeys(selectLinkOpeninNewTab);
     }
 }

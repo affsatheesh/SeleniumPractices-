@@ -31,7 +31,7 @@ public class OldMemberReg extends Helper {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
-      //  driver.get("https://web.jeemgym.com:7000/#/");
+        //  driver.get("https://web.jeemgym.com:7000/#/");
         driver.get("https://skoolgo.pixelmindit.com:6100/#/");
 
         driver.findElement(By.id("userName")).sendKeys("ce@pixelmindit.com");
@@ -39,7 +39,7 @@ public class OldMemberReg extends Helper {
         driver.findElement(By.xpath("//button[text()='Login']")).click();
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-      //  Thread.sleep(8000);
+        //  Thread.sleep(8000);
         WebElement Packages = driver.findElement(By.xpath("//p[text()='Members']"));
         WebElement Addpackage = driver.findElement(By.xpath("//a[text()='Old Member Registration']"));
         Actions action = new Actions(driver);
