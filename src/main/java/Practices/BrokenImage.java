@@ -21,7 +21,11 @@ public class BrokenImage {
         options.addArguments("--incognito");
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+<<<<<<< HEAD
         driver=new ChromeDriver(capabilities);
+=======
+        driver = new ChromeDriver(capabilities);
+>>>>>>> e5b114db44a386b410536de09c3b50eccf4bef36
         brokenImageChcking();
     }
 
@@ -30,9 +34,13 @@ public class BrokenImage {
         WebElement img = driver.findElement(By.xpath("//*[@id='contentblock']/section/div[2]/div/div/img"));
         if (img.getAttribute("naturalWidth").equals("0")) {
             System.out.println("its broken image");
+<<<<<<< HEAD
         }
         else
         {
+=======
+        } else {
+>>>>>>> e5b114db44a386b410536de09c3b50eccf4bef36
             System.out.println("its Not broken image");
         }
 

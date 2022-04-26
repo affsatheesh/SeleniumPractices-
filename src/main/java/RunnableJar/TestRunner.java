@@ -10,8 +10,7 @@ public class TestRunner {
     public static WebDriver driver;
 
     @Test
-    public void newtest()
-    {
+    public void newtest() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://www.google.com/");

@@ -8,7 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.Optional;
+=======
+>>>>>>> e5b114db44a386b410536de09c3b50eccf4bef36
 import java.util.Set;
 
 public class WindowHandling {

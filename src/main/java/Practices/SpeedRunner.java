@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class SpeedRunner {
 
     public static void main(String[] args) {
-        Firefox();
+        //   Firefox();
         Chrome();
     }
 
