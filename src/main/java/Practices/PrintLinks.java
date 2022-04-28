@@ -14,28 +14,12 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class PrintLinks {
-<<<<<<< HEAD
-   public static WebDriver driver ;
-=======
     public static WebDriver driver;
->>>>>>> e5b114db44a386b410536de09c3b50eccf4bef36
 
     public static void main(String[] arg) throws IOException, NotFoundException, InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://www.google.com/");
-<<<<<<< HEAD
-        driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Tester"+ Keys.ENTER);
-        printLinks();
-    }
-    public static void printLinks() throws FileNotFoundException
-    {
-        PrintWriter out = new PrintWriter("E:\\AutomationProjects\\SeleniumPractices-\\Notes\\Test.txt");
-        List<WebElement> alllinks = driver.findElements(By.tagName("a"));
-        for(WebElement link:alllinks)
-        {
-           out.println(link.getText() + " - " + link.getAttribute("href"));
-=======
         driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Tester" + Keys.ENTER);
         printLinks();
     }
@@ -45,9 +29,17 @@ public class PrintLinks {
         List<WebElement> alllinks = driver.findElements(By.tagName("a"));
         for (WebElement link : alllinks) {
             out.println(link.getText() + " - " + link.getAttribute("href"));
->>>>>>> e5b114db44a386b410536de09c3b50eccf4bef36
+            driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Tester" + Keys.ENTER);
+            printLinks();
         }
-        out.close();
+
+/*        public static void printLinks () throws FileNotFoundException {
+            PrintWriter out = new PrintWriter("E:\\AutomationProjects\\SeleniumPractices-\\Notes\\Test.txt");
+            List<WebElement> alllinks = driver.findElements(By.tagName("a"));
+            for (WebElement link : alllinks) {
+                out.println(link.getText() + " - " + link.getAttribute("href"));
+            }
+            out.close();*/
 
     }
 }
